@@ -5,12 +5,20 @@
 
     <body>
 
+        <div>
         <h1><em>Warsztaty Django Girls</em></h1>
         <h2><strong>Blog Tusi</strong></h2>
         <p>Hej!</p>
         <p>Działa!</p>
         <p><a href="http://djangogirls.org">link</a></p>
-
+        </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaks }}</p>
+            </div>
+{% endfor %}
         <ul><li>pierwsza pozycja</li><li>druga pozycja</li></ul>
     </body>
 </html>
